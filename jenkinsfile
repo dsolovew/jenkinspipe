@@ -8,7 +8,15 @@ pipeline {
     stages {
         stage('git clone project') {
             steps {
-                git(url: 'https://github.com/dsolovew/cloneboxfuse.git', branch: 'main' )
+                git 'https://github.com/dsolovew/home10.git'
+            }
+        }
+
+        stage('build') {
+            steps {
+                sh 'docker build -t boxfuse .'
+                sh 'docker tag boxfuse 34.121.77.67:8123/boxfuse'
+                sh 'docker push 34.121.77.67:8123/boxfuse'
             }
         }
     }    
