@@ -8,8 +8,7 @@ pipeline {
     stages {
         stage('git clone project') {
             steps {
-                dir('tmp'){
-                    git 'https://github.com/dsolovew/home10.git'
+                   git(url: 'https://github.com/dsolovew/home10.git', branch: 'main')
                 }
              }
         }
