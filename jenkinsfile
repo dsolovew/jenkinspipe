@@ -14,7 +14,7 @@ pipeline {
 
         stage('build') {
             steps {
-                sh 'docker build -t boxfuse .'
+                sh 'docker build -f home10/dockerfile -t boxfuse .'
                 sh 'docker tag boxfuse 34.121.77.67:8123/boxfuse'
                 sh 'docker push 34.121.77.67:8123/boxfuse'
             }
