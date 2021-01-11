@@ -1,0 +1,15 @@
+pipeline {
+    agent {
+        docker {
+            image '34.121.77.67:8081/repository/mydockerrepo/v2/ubuntu/manifests/1.0.4'
+        }
+        
+    stages {
+        stage('git clone project') {
+            steps {
+                git(url: 'https://github.com/dsolovew/cloneboxfuse.git', branch: 'main' )
+            }
+        }
+    }    
+        
+    }
