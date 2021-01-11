@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image '34.121.77.67:8081/repository/mydockerrepo/v2/ubuntu/manifests/1.0.4'
+            image '34.121.77.67:8123/repository/mydockerrepo/v2/ubuntu/manifests/1.0.4'
         }
     }
         
