@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image '34.121.77.67:8123/ubuntu:1.0.5'
+            args '--privileged -v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
         
