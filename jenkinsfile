@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('git clone project') {
             steps {
-                   git(url: 'https://github.com/dsolovew/home10.git', branch: 'main')
+                   git(url: 'https://github.com/chazovam/jenkins_test.git', branch: 'master')
                 }
              }
         
