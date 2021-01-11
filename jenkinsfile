@@ -11,7 +11,7 @@ pipeline {
                    git(url: 'https://github.com/dsolovew/home10.git', branch: 'main')
                 }
              }
-        }
+        
 
         stage('build') {
             steps {
@@ -21,6 +21,7 @@ pipeline {
             
             }
         }
+    }
     }    
         
     
